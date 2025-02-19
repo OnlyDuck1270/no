@@ -26,13 +26,13 @@ nav {
 }
 
 .logo {
-  width: 150px;
+  width: 10%;
   cursor: pointer;
   margin-left:60px;
 }
 
 nav ul {
-  border: 5px solid #fff;
+  border: 3px solid #fff;
   padding: 30px 50px;
   border-radius: 50px;
   background-color: black;
@@ -69,11 +69,14 @@ nav ul li:hover::after {
 }
 
 .homepage { 
-  margin: 90px 400px;
+  margin: 90px 200px;
 }
 .homepage h1 {
   font-size: 70px;
   color: #fff;
+}
+.homepage h2 {
+  font-size: 40px;
 }
 .homepage p {
   font-size: 20px;
@@ -135,7 +138,6 @@ caption {
   text-align: center;
 }
 
-
 .about {
   display: flex;
   justify-content: space-between;
@@ -172,6 +174,9 @@ table, th, td {
   text-align: center;
   color: #ffab0f;
 }
+table{
+  margin-right: 6%;
+}
 caption {
   font-size: 50px;
   color: #ffab0f;
@@ -179,7 +184,7 @@ caption {
 }
 #add {
   margin-top: 200px;
-  text-align: center;
+  text-align: left;
 }
 
 /*job description*/
