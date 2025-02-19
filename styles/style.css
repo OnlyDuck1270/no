@@ -16,37 +16,10 @@ body{
   background-size: cover;
 }
 
-.jobs {
-  display: flex;
-  align-items: flex-start; /* Aligns items at the top */
-  max-width: 1700px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.jobs-content {
-  flex: 1; /* Takes up remaining space */
-  padding-right: 20px; /* Creates space between content and aside */
-}
-
-.jobs h1 {
-  text-decoration: overline underline;
-  text-decoration-color: #ff5b0f;
-  font: 2.6em 'Verdana', sans-serif;
-}
-
-.jobs h2, em {
-  color: #ff5b0f;
-}
-
-.jobs h2 {
-  font-size: 2em;
-}
-
-nav {
+nav { 
   display: flex;
   margin: 40px 30px;
-  width: 90%;
+  width: 85%;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -67,7 +40,8 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding-right: 50px;
+  margin: 0 50px;
+  position: relative;
 }
 
 nav ul li a {
@@ -76,12 +50,26 @@ nav ul li a {
   font-size: 15px;
 }
 
+nav ul li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  transition: 0.5s;
+}
+
 nav ul li a:hover {
   color: #fff;
 }
+nav ul li:hover::after {
+  width: 100%;
+}
 
 .homepage { 
-  margin-left: 90px;
+  margin: 90px 400px;
 }
 .homepage h1 {
   font-size: 70px;
@@ -90,7 +78,8 @@ nav ul li a:hover {
 .homepage p {
   font-size: 20px;
   color: #fff;
-  margin-top: 20px;
+  margin: 20px 60px;
+  list-style: none;
 }
 .homepage,.about, #add{ /*this one is the animation for both pages*/
   opacity: 0;
@@ -104,54 +93,9 @@ nav ul li a:hover {
   }
 }
 
-.index_page strong {
+.index_page strong, h2 {
   color: #ffab0f;
 }
-
-dl, table, #add {
-  color: #fff;
-  font-size: 20px;
-  font-style: italic;
-  position: relative;
-}
-dt, dd {
-  padding: 10px;
-}
-dd{
-  margin-left: 70px;
-  color: #ffab0f;
-}
-#tutor {
-  margin-bottom: 50px;
-  color: #ffab0f;
-  font-size: 50px
-}
-table, th, td {
-  margin-top: 30px;
-  padding: 20px;
-  border: 4px solid #fff;
-  border-collapse: collapse;
-  width: 45%;
-  float: center;
-  text-align: center;
-  color: #ffab0f;
-}
-caption {
-  font-size: 50px;
-  color: #ffab0f;
-  margin-bottom: 30px;
-}
-#add {
-  margin-top: 200px;
-  text-align: center;
-}
-.about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 100px;
-}
-
 /* This one is for about page*/
 dl, table, #add {
   color: #fff;
@@ -190,6 +134,82 @@ caption {
   margin-top: 200px;
   text-align: center;
 }
+
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+}
+
+
+dl, table, #add {
+  color: #fff;
+  font-size: 20px;
+  font-style: italic;
+  position: relative;
+}
+dt, dd {
+  padding: 10px;
+}
+dd{
+  margin-left: 70px;
+  color: #ffab0f;
+}
+#tutor {
+  margin-bottom: 50px;
+  color: #ffab0f;
+  font-size: 50px
+}
+table, th, td {
+  margin-top: 30px;
+  padding: 20px;
+  border: 4px solid #fff;
+  border-collapse: collapse;
+  width: 45%;
+  float: center;
+  text-align: center;
+  color: #ffab0f;
+}
+caption {
+  font-size: 50px;
+  color: #ffab0f;
+  margin-bottom: 30px;
+}
+#add {
+  margin-top: 200px;
+  text-align: center;
+}
+
+/*job description*/
+.jobs {
+  display: flex;
+  align-items: flex-start; /* Aligns items at the top */
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.jobs-content {
+  flex: 1; /* Takes up remaining space */
+  padding-right: 20px; /* Creates space between content and aside */
+}
+
+.jobs h1 {
+  text-decoration: overline underline;
+  text-decoration-color: #ff5b0f;
+  font: 2.6em 'Verdana', sans-serif;
+}
+
+.jobs h2, em {
+  color: #ff5b0f;
+}
+
+.jobs h2 {
+  font-size: 2em;
+}
+
 aside {
   text-align: center;
   position: sticky;
@@ -213,7 +233,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px
+  padding: 20px;
 }
 
 footer a {
